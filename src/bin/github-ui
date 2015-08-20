@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+'use strict';
+
+
+const request = require('request');
+
+request({
+  url: 'https://api.github.com/users/lazybensch',
+  headers: {
+    'User-Agent': 'lazybensch'
+  }
+}, (err, resp, body)=> {
+  console.log(JSON.parse(body, null, ' '));
+});

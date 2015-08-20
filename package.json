@@ -1,0 +1,27 @@
+{
+  "name": "github-ui",
+  "version": "0.0.0",
+  "description": "...",
+  "main": "index.js",
+  "bin": {
+    "github-ui": "./lib/bin/github-ui"
+  },
+  "scripts": {
+    "compile": "babel -d ./lib ./src && babel src/bin/github-ui --out-file lib/bin/github-ui",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazybensch/github-ui.git"
+  },
+  "author": "Benjamin Schoenburg <lazybensch@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazybensch/github-ui/issues"
+  },
+  "homepage": "https://github.com/lazybensch/github-ui#readme",
+  "devDependencies": {
+    "babel": "^4.6.0",
+    "request": "^2.61.0"
+  }
+}
