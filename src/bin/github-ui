@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 'use strict';
 
+const API = require('../util/api');
+const CLI = require('../util/cli');
 
-const request = require('request');
+const api = new API();
+const cli = new CLI();
 
-request({
-  url: 'https://api.github.com/users/lazybensch',
-  headers: {
-    'User-Agent': 'lazybensch'
-  }
-}, (err, resp, body)=> {
-  console.log(JSON.parse(body, null, ' '));
+cli.loginTo(api).then( user => {
+
+  api.get('notifications').then( list => {
+    console.log(list);
+  });
+
 });

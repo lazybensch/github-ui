@@ -7,7 +7,7 @@
     "github-ui": "./lib/bin/github-ui"
   },
   "scripts": {
-    "compile": "babel -d ./lib ./src && babel src/bin/github-ui --out-file lib/bin/github-ui",
+    "compile": "babel -d lib src && babel src/bin/github-ui --out-file lib/bin/github-ui",
     "prepublish": "npm run compile"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/lazybensch/github-ui#readme",
   "devDependencies": {
     "babel": "^4.6.0",
+    "read": "^1.0.6",
     "request": "^2.61.0"
   }
 }
